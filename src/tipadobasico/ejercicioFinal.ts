@@ -29,10 +29,16 @@ const pedidosValidados: PedidosSaaS[]= pedidosCrudos.map((pedido)=>{
         activo:pedido.activo
     }
 });
-const primerPedido = pedidosValidados[0];
 
-function procesarPedido(pedido:PedidosSaaS){
-    console.log(`Procesando pedido #${pedido.id}`);
+
+
+function procesarPedido(lista:PedidosSaaS[]){
+    lista.forEach((pedido)=>{
+        console.log(`--- Pedido #${pedido.id} ---`);
+        console.log(`Cliente: ${pedido.usuario[0]} Edad: ${pedido.usuario[1]}`);
+        console.log(`Plan: ${pedido.plan}`);
+        console.log(`Ubicacion: Latitud ${pedido.ubicacion[0]}  Longitud ${pedido.ubicacion[1]}`);
+    })
 }
 
-primerPedido && procesarPedido(primerPedido);
+procesarPedido(pedidosValidados);
