@@ -7,9 +7,10 @@
     //mas propiedades = conjunto mas pequeño (SOLO CON INTERFACES)
     //PersonaConVida extends Persona -> PersonaConVida es un subconjunto de Persona
 
-//Esto no es una interfaz, son tipos
+//Esto no es una interfaz, NO APLICA LA REGLA DE mas propiedades, son tipos
 type SoloStrings = string;
 type StringONumero = string | number;
 
 //StringONumero es un superconjunto de SoloStrings
 //SoloStrings es un subconjunto de StringONumero
+

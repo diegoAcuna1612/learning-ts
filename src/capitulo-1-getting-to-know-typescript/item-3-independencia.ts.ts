@@ -10,7 +10,7 @@ function calculateArea(shape: Shape) {
   }
 }
 
-// ✅ Solución: Comprobar una propiedad real que exista en JS 
+// Solución: Comprobar una propiedad real que exista en JS 
 function calculateAreaFixed(shape: Shape) {
   if ('height' in shape) {
     return shape.width * shape.height; // TS deduce que es Rectangle 
